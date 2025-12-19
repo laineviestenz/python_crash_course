@@ -10,3 +10,4 @@ while True:
 print(responses)
 for name, spot in responses.items():
     print(name.title() + ' would like to visit ' + spot.title() + '.')
+#empty comment
