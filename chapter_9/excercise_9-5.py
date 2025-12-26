@@ -15,6 +15,8 @@ class User():
         self.login_attempts = 0
 
     def describe_person(self):
+        """describes the person by first and last name, gives age, weight, and login attempts,
+        does not include a description of privieges (see show_priviliges)"""
         print(self.first_name + ' ' + self.last_name + ' is ' + self.age + 
             ' years old and weighs ' + self.weight + ' pounds. ' +
             'He has ' + str(self.login_attempts) + ' login attempts.') 
