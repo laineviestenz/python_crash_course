@@ -22,11 +22,16 @@ class User():
             'He has ' + str(self.login_attempts) + ' login attempts.') 
 
 class Privileges():
-    def __init__(self, privileges = ['can delete', 'anything else']):
+    def __init__(self, privileges):
         self.privileges = privileges
     
+    def configure_privilages(self, privileges):
+        self.privileges = privileges
+        #temporary print statement for check
+        print(self.privileges)
     def show_privileges(self):
-        """displays the person's full name and lists their privileges with proper grammer in sentence format"""
+        """displays the person's full name and lists their privileges with 
+        proper grammer in sentence format"""
         print(self.first_name.title() + ' ' + self.last_name.title() + ' can ', end = '')
         print(self.privileges)
         # for i in self.privileges[:-1]:
@@ -34,12 +39,13 @@ class Privileges():
         # print('and ' + self.privileges[-1] + '.')
 
 class Admin(User):
-    def __init__(self, first_name, last_name, age, weight):
+    def __init__(self, first_name, last_name, age, weight, privileges):
         super().__init__(first_name, last_name, age, weight)
-        self.privileges = Privileges()
+        self.privileges = Privileges(privileges)
 
 
 
 admin = Admin('laine', 'viestenz', '67', '356')
+Privileges.configure_privilages(admin, ['nads;', 'sfda'])
 
 Privileges.show_privileges(admin)
