@@ -1,3 +1,9 @@
+"""
+I have spent a lot of time on this and I am unsure if I am misunderstanding the
+instructions or the fundamentals of what should happen, but I am going to move
+on and possibly come back later.
+"""
+
 class User():
     def __init__(self, first_name, last_name, age, weight):
         self.first_name = first_name
