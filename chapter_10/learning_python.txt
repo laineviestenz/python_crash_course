@@ -1,0 +1,3 @@
+In python you can create classes
+In python you can create methods
+In python you can define variables
