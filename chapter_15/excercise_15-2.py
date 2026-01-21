@@ -9,7 +9,7 @@ ya = [n**3 for n in xa]
 plt.style.use('default')
 fig, (ax, aa) = plt.subplots(1, 2)
 
-ax.scatter(x,y)
-aa.scatter(xa, ya, s=1)
+ax.scatter(x,y, c=y, cmap = plt.cm.Reds)
+aa.scatter(xa, ya, c=ya, cmap = plt.cm.Blues, s=1)
 
 plt.show()
