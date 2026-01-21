@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-
+"""plot the first 5 and 5000 cubes in the same figure with colormapping"""
 x = range(1,6)
 y = [n**3 for n in x]
 

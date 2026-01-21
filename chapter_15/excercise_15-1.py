@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+"""plot the first 5 and first 5000 cubes in 2 separate graphs in the same figure"""
 
 x = range(1,6)
 y = [n**3 for n in x]
