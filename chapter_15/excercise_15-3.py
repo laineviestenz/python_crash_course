@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
-
 from chapter_15.rw_modified import RandomWalk
+
+"""I'm changing the excercise slightly here, rather than changing the random
+walk class, I am going to create a new method to plot the graph as requeste."""
 
 #make a random walk
 rw = RandomWalk(500)
