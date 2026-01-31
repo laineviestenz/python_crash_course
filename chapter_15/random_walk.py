@@ -35,18 +35,32 @@ class RandomWalk:
             x = self.x_values[-1] + x_step
             y = self.y_values[-1] + y_step
             
-            x = self.x_values.append(x)
-            y = self.y_values.append(y)
+            self.x_values.append(x)
+            self.y_values.append(y)
 
-    def showplot(walkname):
+    def showplot(self):
+        """plot the random walk as a scatter plot"""
         #plot the points in the walk
         plt.style.use('classic')
         fig, ax = plt.subplots(figsize=(15,9))
-        point_numbers = range(walkname.num_points)
-        ax.scatter(walkname.x_values, walkname.y_values, s=15, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none')
+        point_numbers = range(self.num_points)
+        ax.scatter(self.x_values, self.y_values, s=15, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none')
         ax.set_aspect('equal')
         #the points could also be set to 0,0 since that is always the starting point, this
         #way just offers backup incase we change the rw funciton
-        ax.scatter(walkname.x_values[0], walkname.y_values[0], c='green', edgecolors='none', s=100)
-        ax.scatter(walkname.x_values[-1], walkname.y_values[-1], c='red', edgecolors='none', s=100)
-        plt.show()  
+        ax.scatter(self.x_values[0], self.y_values[0], c='green', edgecolors='none', s=100)
+        ax.scatter(self.x_values[-1], self.y_values[-1], c='red', edgecolors='none', s=100)
+        plt.show()
+
+    def plotwithlines(self):
+        """graph the points in the walk, connected by a line"""
+        plt.style.use('classic')
+        fig, ax = plt.subplots(figsize=(15,9))
+        point_numbers = range(self.num_points)
+        ax.plot(self.x_values, self.y_values)
+        ax.set_aspect('equal')
+        #the starting points could also be set to 0,0 since that is always the 
+        #starting point, this way is just more reliable
+        ax.scatter(self.x_values[0], self.y_values[0], c='green', s=100)
+        ax.scatter(self.x_values[-1], self.y_values[-1], c='red', s=100)
+        plt.show()
