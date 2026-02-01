@@ -52,12 +52,12 @@ class RandomWalk:
         ax.scatter(self.x_values[-1], self.y_values[-1], c='red', edgecolors='none', s=100)
         plt.show()
 
-    def plotwithlines(self):
+    def plotwithlines(self, color='blue'):
         """graph the points in the walk, connected by a line"""
         plt.style.use('classic')
         fig, ax = plt.subplots(figsize=(15,9))
         point_numbers = range(self.num_points)
-        ax.plot(self.x_values, self.y_values)
+        ax.plot(self.x_values, self.y_values, c=color)
         ax.set_aspect('equal')
         #the starting points could also be set to 0,0 since that is always the 
         #starting point, this way is just more reliable

@@ -8,4 +8,5 @@ walk class, I am going to create a new method to plot the graph as requested."""
 rw = RandomWalk(5000)
 rw.fill_walk()
 
-rw.plotwithlines()
+#uses optional color input to color lines
+rw.plotwithlines(color='yellow')
