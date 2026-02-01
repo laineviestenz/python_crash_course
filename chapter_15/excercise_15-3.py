@@ -6,11 +6,6 @@ walk class, I am going to create a new method to plot the graph as requested."""
 
 #make a random walk
 rw = RandomWalk(5000)
-#change the options for the direction and distance
-rw.set_x_direction([1, -1])
-rw.set_y_direction([1, -1])
-rw.set_x_distance([0,1,2])
-rw.set_y_distance([0,1])
 
 #generate the values
 rw.fill_walk()
