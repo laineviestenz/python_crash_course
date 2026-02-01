@@ -18,15 +18,23 @@ class RandomWalk:
         self.ydistance = [0,1,2,3,4]
 
     def set_x_direction(self, xdirection):
+        """sets the options for xdirection, if not called, the default value
+        from the __init__ function is used"""
         self.xdirection = xdirection
 
     def set_y_direction(self, ydirection):
+        """sets the options for xdirection, if not called, the default value
+        from the __init__ function is used"""
         self.ydirection = ydirection
 
     def set_x_distance(self, xdistance):
+        """sets the options for xdirection, if not called, the default value
+        from the __init__ function is used"""
         self.xdistance = xdistance
 
     def set_y_distance(self, ydistance):
+        """sets the options for xdirection, if not called, the default value
+        from the __init__ function is used"""
         self.ydistance = ydistance
 
     def fill_walk(self):

@@ -6,7 +6,6 @@ walk class, I am going to create a new method to plot the graph as requested."""
 
 #make a random walk
 rw = RandomWalk(5000)
-
 #generate the values
 rw.fill_walk()
 
